@@ -6,6 +6,7 @@ public class hairetsu {
 		System.out.println("問１");
 		//問題1:配列"numa"の要素を全要素を出力しなさい。※i++など利用しないfor文で記述すること
 		int[] numa = {1, 2, 3, 4, 5};
+		
 		for (int data:numa) {
 			System.out.println(data);
 		}
@@ -15,6 +16,12 @@ public class hairetsu {
 		
 		//問題2:配列"numb"の要素を逆順に出力してください。
 		int[] numb = {1, 2, 3, 4, 5};
+		
+		//★配列数４つの中から、iが0になるまで、配列番号4から配列番号を１つずつ減らしながら出力する
+			for(int i = numb.length - 1; i >= 0; i-- ) {
+				System.out.println(numb[i]);
+			}
+		
 		
 		//改行
 		System.out.println("問３");
