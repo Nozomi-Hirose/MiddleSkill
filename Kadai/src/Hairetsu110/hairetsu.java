@@ -104,6 +104,7 @@ System.out.println("問６");
 		}
 		
 		
+		
 //改行
 System.out.println("問７");
 		
