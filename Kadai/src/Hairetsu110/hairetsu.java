@@ -2,8 +2,10 @@ package Hairetsu110;
 
 public class hairetsu {
 	public static void main(String[] args) {
-		//改行
-		System.out.println("問１");
+		
+//改行
+	System.out.println("問１");
+		
 //問題1:配列"numa"の要素を全要素を出力しなさい。※i++など利用しないfor文で記述すること
 		int[] numa = {1, 2, 3, 4, 5};
 		for (int data:numa) {
@@ -17,22 +19,36 @@ System.out.println("問２");
 		int[] numb = {1, 2, 3, 4, 5};
 		
 		/*★配列数４つの中から、iが0になるまで、配列番号4から配列番号を１つずつ減らしながら出力する*/
-			for(int i = numb.length - 1; i >= 0; i-- ) {
+		for(int i = numb.length - 1; i >= 0; i-- ) {
 				System.out.println(numb[i]);
 			}
 		
-		
 //改行
 System.out.println("問３");
-		
+
+/*★★★質問>★★★
+ * コンパイルすると0，2，2，6，6と出力される。原因が分かりません*/
+
 //問題3:配列"numc"の中で偶数の要素だけを合計した値を出力してください。
 		int[] numc = {1, 2, 3, 4, 5};
+		
+		int evenSum = 0;
+		for (int numcNumber:numc) {
+			 if (numcNumber % 2 == 0) {
+			      evenSum += numcNumber;
+		}
+			 System.out.println(evenSum);
+		}
+
+
 		
 //改行
 System.out.println("問４");
 		
 //問題4:この配列"numd"をコピーした配列名"new_numd"を作り"new_numd"の中身を出力してください。
 		int[] numd = {1, 3, 5, 7, 9};
+		
+		
 		
 //改行
 System.out.println("問５");
