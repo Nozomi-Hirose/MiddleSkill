@@ -27,6 +27,10 @@ System.out.println("問２");
 			
 			System.out.println(result);
 			
+			/*↓この書き方ならpositiveになる*/
+			String result2 = (numb >=1) ?"positive" : "negative" ;
+			System.out.println(result2);
+			
 			
 	//改行
 System.out.println("問３");
