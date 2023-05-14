@@ -16,7 +16,7 @@ public class JoukenbBunki {
 		int z = 15;
 
 		/*条件１【x,y,zが正の整数】*/
-		if (x >=0 && y>=0 && z>=0) ; {
+		if (x >=0 && y>=0 && z>=0)  {
 			
 			/*条件２【条件１「x,y,zが正の整数」を満たす＆xの値が10の倍数】*/
 			if(x % 10 == 0) {
@@ -30,7 +30,17 @@ public class JoukenbBunki {
 					System.out.println("プラス100：NG");
 					}
 			
+				/*★↓条件式の中に条件式）*/
+				if (x >=0 && y>=0 && z>=0 &&(x % 10 == 0)) {
+					if(x + y + z == 100) {
+						System.out.println("プラス100：OK"); 
+					} else {
+						System.out.println("プラス100：NG");
+					} 
+				}
 			}
+			
+
 		}
 
 		/*★↑全て条件を満たすときと条件３だけ満たさないときは上記で良いかと思うのですが、
