@@ -31,7 +31,7 @@ System.out.println("問２");
 System.out.println("問３");
 
 /*★★★質問>★★★
- * コンパイルすると0，2，2，6，6と出力される。原因が分かりません*/
+ * コンパイルすると0，2，2，6，6と出力される。原因…｝の内側にSystem.out.printlnが記述されていた*/
 //問題3:配列"numc"の中で偶数の要素だけを合計した値を出力してください。
 		int[] numc = {1, 2, 3, 4, 5};
 		
@@ -40,10 +40,11 @@ System.out.println("問３");
 			 if (i % 2 == 0) {
 			      evenSum += i;
 		}
-			 System.out.println(evenSum);
+			
 		}
 
-
+		 System.out.println(evenSum);
+		
 		
 //改行
 System.out.println("問４");
