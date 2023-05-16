@@ -17,19 +17,17 @@ System.out.println("問２");
 //問題2:変数"numb"の値が正の場合は"positive"、負の場合は"negative"、0の場合は"zero"と出力するプログラムを三項演算子を用いて作成してください。
 			//(String result変数を用いてそこに値を格納しそれを出力する形式でお願いいたします)
 			
-			int numb = 5;
+			int numb = 5; //初期化
 			
 			/*★条件式１（numbが１以上のとき）,条件式２（numb1が-1以下のとき）。"zero"は条件式１・条件式２どちらにも当てはまらないときに出力される*/
-			String result = (numb >=1) ? (numb <= -1) ?"positive" : "negative" : "zero" ;
+			String result = numb >=1 ?"positive" :  numb <= -1 ? "negative" : "zero" ; //if else-if else　と一緒の書き方
 						
 /*★↑条件式の書き方自体は合っているかと思うのですが、negative1になる原因が分かりません…*/
 			
 			
 			System.out.println(result);
 			
-			/*★↓この書き方ならpositiveになる*/
-			String result2 = (numb >=1) ?"positive" : "negative" ;
-			System.out.println(result2);
+	
 			
 			
 			
@@ -69,7 +67,7 @@ System.out.println("問４");
 	
 	/*a = 条件式1 ? 条件式2 ? "A" : "B" : "C";*/
 	/*a =　両方とも正の値、片方が正の値、両方とも負、それ以外*/
-	String results = (nume >= 0 && numf >= 0)? (nume >= 0 || numf < 0) ? (nume < 0 && numf < 0) ?"both positive" : "one positive" : "both negative" : "etc";
+	String results = (nume >= 0 && numf >= 0)? "both positive" : (nume > 0 || numf > 0) ? "one positive" : (nume < 0 && numf < 0) ? "both negative" : "etc";
 	
 	System.out.println(results);
 
