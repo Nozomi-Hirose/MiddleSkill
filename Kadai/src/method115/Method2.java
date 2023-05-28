@@ -3,6 +3,9 @@ package method115;
 import java.util.Arrays;
 
 public class Method2 {
+
+
+
 	public static void main(String[] args) {
 		//改行
 		System.out.println("問１");
@@ -28,21 +31,25 @@ public class Method2 {
 		reverse(i); //reserveの計算をしている
 
 		System.out.println(Arrays.toString(i)); //文字列に変換してソートの後の配列の値を出力する
+		
+		
 		//改行
 		System.out.println("問４");
 		//問4のメソッドを呼び出して出力してください（引数,配列[5,3,1,9,4,8]）
 		int [] k = {5,3,1,9,4,8};
 
-		
-		int intMin = getMin(k);
-		System.out.println(intMin); //★インデックス番号の出し方が分からない。
+		int minIndex =getMin(k); //Minメソッドに配列kを代入
+		System.out.println(minIndex);//値が最小値の時の要素番号を出力
+		//System.out.println(intMin); //値が最小値のときの値を出力
 	}
+	//System.out.println(minIndex); //★インデックス番号の出し方が分からない
+
 
 	//問題1:2つの整数を受け取り、それらの和を返すメソッドを作成してください。
 	public static int add(int num1, int num2) { //★addメソッドにint型の引数num1（5)、num２(10)を渡す
 		return  num1 + num2; 
 	}
-	
+
 	//問題2:文字列を受け取り、その文字列が回文であるかどうかを返すメソッドを作成してください。
 	public static boolean isPalindrome(String sentence) { //★boolean型の変数isPalindromeにString型の引数sentence(しんぶんし）を渡す
 		int minIdx = 0; //★index番号0から始まり
@@ -68,18 +75,22 @@ public class Method2 {
 	//問題4:整数の配列を受け取り、その配列の中で最小値を持つ要素のインデックスを返すメソッドを作成してください。
 	public static int getMin(int[] array) {
 		int intMin = array[0];
+		int minIndex = 0;
 
+		//intMinに代入されている値と配列の要素を比較して、配列の要素のほうが小さい場合値を上書きする.
 		for (int i = 1; i < array.length; i++ ) {
-			if(intMin > array[i]) {
-				intMin = array[i];
+			if(intMin > array[i]) {//配列K(要素番号0）と配列Kのi番目を比較する
+				intMin = array[i];//i番目が要素番号0より小さいとき、intMinにi番目の値を代入
+				minIndex = i;//要素番号を代入
 			}
 		}
-		return intMin;
-
+		return minIndex;
 
 	}
 
 }
+
+
 
 
 
