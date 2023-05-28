@@ -38,7 +38,7 @@ public class Method2 {
 		//問4のメソッドを呼び出して出力してください（引数,配列[5,3,1,9,4,8]）
 		int [] k = {5,3,1,9,4,8};
 
-		int minIndex =getMin(k); //Minメソッドに配列kを代入
+		int minIndex =getMin(k); //getMinメソッドに配列kを代入
 		System.out.println(minIndex);//値が最小値の時の要素番号を出力
 		//System.out.println(intMin); //値が最小値のときの値を出力
 	}
@@ -73,22 +73,28 @@ public class Method2 {
 
 
 	//問題4:整数の配列を受け取り、その配列の中で最小値を持つ要素のインデックスを返すメソッドを作成してください。
+//	public static int getMin(int[] array) {
+//		int intMin = array[0];
+//		int minIndex = 0;
+//
+//		//intMinに代入されている値と配列の要素を比較して、配列の要素のほうが小さい場合値を上書きする.
+//		for (int i = 1; i < array.length; i++ ) {
+//			if(intMin > array[i]) {//配列K(要素番号0）と配列Kのi番目を比較する
+//				intMin = array[i];//i番目が要素番号0より小さいとき、intMinにi番目の値を代入
+//				minIndex = i;//要素番号を代入
+//			}
+//		}
+//		return minIndex;
+//
+//	}
 	public static int getMin(int[] array) {
-		int intMin = array[0];
-		int minIndex = 0;
-
-		//intMinに代入されている値と配列の要素を比較して、配列の要素のほうが小さい場合値を上書きする.
-		for (int i = 1; i < array.length; i++ ) {
-			if(intMin > array[i]) {//配列K(要素番号0）と配列Kのi番目を比較する
-				intMin = array[i];//i番目が要素番号0より小さいとき、intMinにi番目の値を代入
-				minIndex = i;//要素番号を代入
-			}
-		}
-		return minIndex;
-
-	}
-
+	int min = Arrays.stream(array).min().getAsInt(); //配列の最小値を取得
+    int minIndex = Arrays.stream(array).boxed().toList().indexOf(min); //配列の最小値のインデックスを取得
+    return minIndex;
 }
+	
+}
+
 
 
 
