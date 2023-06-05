@@ -73,25 +73,25 @@ public class Method2 {
 
 
 	//問題4:整数の配列を受け取り、その配列の中で最小値を持つ要素のインデックスを返すメソッドを作成してください。
-//	public static int getMin(int[] array) {
-//		int intMin = array[0];
-//		int minIndex = 0;
-//
-//		//intMinに代入されている値と配列の要素を比較して、配列の要素のほうが小さい場合値を上書きする.
-//		for (int i = 1; i < array.length; i++ ) {
-//			if(intMin > array[i]) {//配列K(要素番号0）と配列Kのi番目を比較する
-//				intMin = array[i];//i番目が要素番号0より小さいとき、intMinにi番目の値を代入
-//				minIndex = i;//要素番号を代入
-//			}
-//		}
-//		return minIndex;
-//
-//	}
 	public static int getMin(int[] array) {
-	int min = Arrays.stream(array).min().getAsInt(); //配列の最小値を取得
-    int minIndex = Arrays.stream(array).boxed().toList().indexOf(min); //配列の最小値のインデックスを取得
-    return minIndex;
-}
+		//int intMin = array[0];
+		int minIndex = 0;
+
+		//intMinに代入されている値と配列の要素を比較して、配列の要素のほうが小さい場合値を上書きする.
+		for (int i = 1; i < array.length; i++ ) {
+			if(array[minIndex] > array[i]) {//配列K(要素番号0）と配列Kのi番目を比較する
+				array[minIndex] = array[i];//i番目が要素番号0より小さいとき、intMinにi番目の値を代入
+				minIndex = i;//要素番号を代入
+			}
+		}
+		return minIndex;
+
+	}
+//	public static int getMin(int[] array) {
+//	int min = Arrays.stream(array).min().getAsInt(); //配列の最小値を取得
+//    int minIndex = Arrays.stream(array).boxed().toList().indexOf(min); //配列の最小値のインデックスを取得
+//    return minIndex;
+//}
 	
 }
 
