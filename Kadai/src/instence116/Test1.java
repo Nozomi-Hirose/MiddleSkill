@@ -1,5 +1,5 @@
 package instence116;
-//下記Test1.java
+
 public class Test1 {
 	public static void main(String[] args) {
 		//改行
@@ -10,27 +10,18 @@ public class Test1 {
 		BankAccount yamada = new BankAccount("山田",100000); //BAckAccountをインスタンス化(accountNumberに山田、
 		//		//【メモ】newで新しいインスタンス(yamada）を作成
 		//		//これでyamadaに預金情報を持たせることができる
-		//		
-		//		
 		System.out.println(yamada.getBalance());
 		
 		double balance = yamada.getBalance();
 		System.out.println(balance);
 		//		【メモ】
 		//		public BankAccount(String accountNumber, double balance) {
-		//
-		//
-		//			//アカウント名
-		//			this.accountNumber = accountNumber;
-		//			//初期残高
-		//			this.balance = balance; ★←ここにdouble balanceの値が入る★
+		//			this.accountNumber = accountNumber; ←アカウント名
+		//			this.balance = balance; ←ここにdouble balanceの値が入る。初期残高
 		//		}
-		//		
 		//　★	public double getBalance() {
 		//		return balance; ★←BankAccountの引数double balanceの値をそのまま返すメソッド
 		//	}
-
-
 		//改行
 		System.out.println("問２");
 		//問題2:BankAccountインスタンス「yamada」の残高3万円を預金して「残高」を出力してください。
@@ -59,7 +50,6 @@ public class Test1 {
 		//改行
 		System.out.println("問６");
 		//問題6:Personインスタンス：「sato」の性別を「男性」→「女性」に変更して性別を出力してください。
-
 		sato.setGender("女性");
 		System.out.println(sato.getGender());
 	}
