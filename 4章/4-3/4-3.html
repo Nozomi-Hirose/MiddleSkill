@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>基本的な表の作成</title>
+    </head>
+    <body>
+        <table border="1"  width="350">
+            <tr>
+                <!-- trはTable Row（行） -->
+                <!-- thはTable Header（見出し）-->
+                <!-- tdはTable Data（データ） -->
+                <th>名前</th>
+                <th>金額</th>
+                <th>個数</th>
+                <th>担当</th>
+            </tr>
+            <tr>
+                <td>車</td>
+                <td rowspan="2">100万円</td>
+                <!-- <td>100万円</td> -->
+                <td>300</td>
+                <td>山田</td>
+            </tr>
+            <tr>
+                <td>自転車</td>
+                <td>3台</td>
+                <td rowspan="2">田中</td>
+                <!-- rowspan セルを縦に２つ結合する -->
+            </tr>
+            <tr>
+                <td>飛行機</td>
+                <td colspan="2">不明</td>
+                <!-- <td>田中</td>  -->
+            </tr>
+            <tr>
+                <td colspan="3">秘密</td>
+     <!-- colspan　セルを横に3つ結合する -->
+                <!-- <td>□</td>
+                <td>□</td> -->
+                <td>金子</td> 
+            </tr>
+        </table>
+
+    </body>
+</html>
